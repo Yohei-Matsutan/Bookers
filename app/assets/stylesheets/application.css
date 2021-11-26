@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 33px;
+}
+
+p{
+  margin: 33px;
+}
+
+table{
+  border-collapse: collapse; /*隣り合うセルのボーダーを間隔をあけて表示*/
+}
+
+th{
+  padding: 3px;
+  font-size: 13px;
+}
+
+.alert{
+  color: red;
+}
+
+.notice{
+  color: green;
+}

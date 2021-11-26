@@ -1,8 +1,10 @@
 <% if @book.errors.any? %>
-  <%= @book.errors.count %> errors prohibited this book from being saved:
-  <% @book.errors.full_messages.each do |message| %>
-    <%= message %>
-  <% end %>
+  <p class = alert>
+    <%= @book.errors.count %> errors prohibited this book from being saved:
+      <% @book.errors.full_messages.each do |message| %>
+        <%= message %>
+      <% end %>
+  </p>
 <% end %>
 
 
