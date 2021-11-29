@@ -8,12 +8,12 @@ class BooksController < ApplicationController
   end
 
   def create
-    # なんでかわからなくなったけど、ここでbooksを定義しておけばrender :indexした時に@booksが空にならない
-    @books = Book.all
     @book = Book.new(book_params)
     if @book.save
       redirect_to book_path(@book.id), notice: 'Book was successfully created.'
     else
+      # Viewから読み込むから、ここでViewに渡すための@booksを定義する
+      @books = Book.all
       render :index
     end
   end
